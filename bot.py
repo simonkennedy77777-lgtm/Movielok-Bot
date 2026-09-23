@@ -14,7 +14,7 @@ from telegram.ext import (
     filters,
 )
 
-BOT_TOKEN = os.environ["BOT_TOKEN"]
+BOT_TOKEN = os.environ["8875846282:AAHphZaeFkrI9l6pYF9kveId-_JWMOSDrxY"]
 ADMIN_CHAT_ID = os.environ.get("ADMIN_CHAT_ID", "")
 
 USDT_BEP20 = os.environ.get("USDT_BEP20", "YOUR_BEP20_ADDRESS")
