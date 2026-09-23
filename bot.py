@@ -541,6 +541,18 @@ def main():
         CallbackQueryHandler(button_handler)
     )
 
+    PORT = int(os.environ.get("PORT", "10000"))
+WEBHOOK_URL = os.environ.get("WEBHOOK_URL")
+
+if WEBHOOK_URL:
+    app.run_webhook(
+        listen="0.0.0.0",
+        port=PORT,
+        url_path="telegram",
+        webhook_url=f"{WEBHOOK_URL.rstrip('/')}/telegram",
+        drop_pending_updates=True,
+    )
+else:
     app.run_polling()
 
 
