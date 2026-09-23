@@ -1,6 +1,0 @@
-services:
-  - type: worker
-    name: movielok-bot
-    runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python bot.py
